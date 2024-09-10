@@ -1,0 +1,25 @@
+/* /src/styles/ServiceCard.css */
+.service-card {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: white;
+    margin-bottom: 10px;
+  }
+  
+  .rank {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .details {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .links a {
+    margin-right: 10px;
+  }
+  
