@@ -1,0 +1,38 @@
+.hero {
+    /*background-image: url('/images/iphone-banner.jpg'); /* You'll need an appropriate image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-text {
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+  
+  .hero-btn {
+    background-color: #0070c9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .hero-btn:hover {
+    background-color: #005bb5;
+  }
+  
