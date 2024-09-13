@@ -1,11 +1,11 @@
 import React from 'react';
-import './ServiceShowcase.css';
+import '../assets/styles/ServiceShowcase.css';  // Ensure your styles are properly linked
 
 const services = [
-  { name: 'Plumbing Service', description: 'Fast and reliable plumbing.', imgSrc: '/assets/plumbing.jpg' },
-  { name: 'Electricians', description: 'Certified electricians for all your needs.', imgSrc: '/assets/electrician.jpg' },
-  { name: 'Home Cleaning', description: 'Book a trusted cleaner in minutes.', imgSrc: '/assets/cleaning.jpg' },
-  // Add more services here
+  { name: 'Plumbing Service', description: 'Reliable plumbing services.', imgSrc: '/assets/images/plumbing.jpg' },
+  { name: 'Electricians', description: 'Certified electricians for your home.', imgSrc: '/assets/images/electricians.jpg' },
+  { name: 'Home Cleaning', description: 'Trusted home cleaning services.', imgSrc: '/assets/images/cleaning.jpg' },
+  // Add more services as needed
 ];
 
 const ServiceShowcase = () => {

@@ -9,19 +9,13 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* Navbar */}
         <Navbar />
-
-        {/* Main Routing */}
         <main>
           <Switch>
             <Route path="/" exact component={HomePage} />
             <Route path="/service/:id" component={ServicePage} />
-            {/* Add more routes as necessary */}
           </Switch>
         </main>
-
-        {/* Footer */}
         <Footer />
       </div>
     </Router>
