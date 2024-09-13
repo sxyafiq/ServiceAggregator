@@ -1,0 +1,23 @@
+.hero-section {
+    height: 80vh;
+    background-image: url('/assets/hero-background.jpg'); /* Replace with your own image */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+  .hero-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
