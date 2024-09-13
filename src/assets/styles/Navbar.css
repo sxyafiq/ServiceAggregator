@@ -1,27 +1,97 @@
+/* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #000;
-    color: #fff;
-  }
-  
-  .navbar-logo a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 24px;
-  }
-  
-  .navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .navbar-links a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #000;
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+.navbar-links li {
+  position: relative;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100vw;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Dropdown visible on hover */
+.navbar-links li:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: flex;
+  gap: 50px;
+}
+
+.dropdown-column h4 {
+  margin-bottom: 10px;
+}
+
+.dropdown-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown-column ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 0;
+  display: block;
+}
+
+.dropdown-column ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Advanced hover animation */
+.navbar-links li a:hover {
+  color: #007aff;
+  transition: color 0.3s ease;
+}
+
+/* Animate dropdown background color */
+.dropdown-menu {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-links li:hover .dropdown-menu {
+  background-color: #111;
+}

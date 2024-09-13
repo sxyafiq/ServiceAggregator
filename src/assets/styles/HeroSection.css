@@ -1,23 +1,41 @@
 .hero-section {
-    height: 80vh;
-    background-image: url('../assets/images/hero-background.jpg'); /* Replace with your own image */
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-  }
-  
-  .hero-content {
-    text-align: center;
-  }
-  
-  .hero-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
+  height: 100vh;
+  background-image: url('../images/hero-background.jpg'); /* Ensure you use a high-quality image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-content {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hero-content p {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.hero-btn {
+  margin-top: 30px;
+  padding: 15px 30px;
+  background-color: #007aff;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #005bb5;
+}

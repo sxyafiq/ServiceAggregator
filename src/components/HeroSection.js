@@ -1,13 +1,13 @@
 import React from 'react';
-import '../assets/styles/HeroSection.css'; // Style the hero section
+import '../assets/styles/HeroSection.css';
 
 const HeroSection = () => {
   return (
     <section className="hero-section">
       <div className="hero-content">
-        <h1>Discover the Best Services Near You</h1>
-        <p>Your one-stop solution for all your service needs.</p>
-        <a href="#services" className="hero-btn">Explore Services</a>
+        <h1>Discover Revolutionary Services</h1>
+        <p>Leading the way to innovative solutions for your everyday needs.</p>
+        <a href="#services" className="hero-btn">Explore Now</a>
       </div>
     </section>
   );
