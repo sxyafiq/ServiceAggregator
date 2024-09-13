@@ -1,6 +1,6 @@
 .hero-section {
     height: 80vh;
-    background-image: url('/assets/hero-background.jpg'); /* Replace with your own image */
+    background-image: url('../assets/images/hero-background.jpg'); /* Replace with your own image */
     background-size: cover;
     display: flex;
     align-items: center;
