@@ -13,9 +13,9 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            {/* Route for the dynamic ServicePage */}
-            <Route path="/service/:id" element={<ServicePage />} />
+            <Route path="/service/:name" element={<ServicePage />} />
           </Routes>
+
         </main>
         <Footer />
       </div>
