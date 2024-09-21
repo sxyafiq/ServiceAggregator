@@ -8,7 +8,7 @@ interface ServiceCategory {
 }
 
 // Define the service categories with types
-const serviceCategories: ServiceCategory[] = [
+const categories = [
   {
     category: 'Home Services',
     services: ['Cleaning Services', 'Plumbing Services', 'Electrical Services'],
