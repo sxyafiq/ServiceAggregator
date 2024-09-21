@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import './Header.css';
 
-const Header = () => {
-  const [activeDropdown, setActiveDropdown] = useState(null);
+const Header: React.FC = () => {
+  // State to track the active dropdown
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  const handleMouseEnter = (section) => {
+  // Handle mouse enter, set active dropdown to the section name
+  const handleMouseEnter = (section: string) => {
     setActiveDropdown(section);
   };
 
+  // Handle mouse leave, reset active dropdown
   const handleMouseLeave = () => {
     setActiveDropdown(null);
   };
@@ -68,7 +71,7 @@ const Header = () => {
             onMouseLeave={handleMouseLeave}
           >
             iPhone
-            {/* You can add dropdown for iPhone here, following same structure */}
+            {/* You can add dropdown for iPhone here, following the same structure */}
           </div>
 
           <div
@@ -77,7 +80,7 @@ const Header = () => {
             onMouseLeave={handleMouseLeave}
           >
             Watch
-            {/* You can add dropdown for Watch here, following same structure */}
+            {/* You can add dropdown for Watch here, following the same structure */}
           </div>
         </nav>
       </div>

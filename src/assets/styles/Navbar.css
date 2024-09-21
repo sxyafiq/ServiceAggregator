@@ -1,4 +1,8 @@
 /* Navbar */
+.navbar-wrapper {
+  position: relative;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -12,86 +16,66 @@
   font-size: 24px;
   font-weight: bold;
   color: #fff;
-  padding: 0 20px;
 }
 
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 0px;
   padding: 0;
-}
-
-.navbar-links a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  padding: 5px 10px;
 }
 
 .navbar-links li {
   position: relative;
 }
 
+.navbar-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
 /* Dropdown Menu */
 .dropdown-menu {
   position: absolute;
-  left: 0;
   top: 100%;
-  width: 100vw;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
   background-color: #000;
   color: #fff;
-  display: flex;
-  justify-content: space-between;
-  padding: 40px;
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(-20px); /* Dropdown starts above the screen */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth animation */
+  z-index: 1000;
 }
 
-/* Dropdown visible on hover */
+/* Show dropdown on hover */
 .navbar-links li:hover .dropdown-menu {
+  display: flex; /* Show dropdown */
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0); /* Slide down */
 }
 
 /* Dropdown Content */
 .dropdown-content {
-  display: flex;
-  gap: 50px;
-}
-
-.dropdown-column h4 {
-  margin-bottom: 10px;
-}
-
-.dropdown-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.dropdown-column ul li a {
-  text-decoration: none;
-  color: #fff;
-  padding: 5px 0;
   display: block;
+  width: 100%;
+  max-width: 1200px;
 }
 
-.dropdown-column ul li a:hover {
+.dropdown-content a {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
   text-decoration: underline;
-}
-
-/* Advanced hover animation */
-.navbar-links li a:hover {
-  color: #007aff;
-  transition: color 0.3s ease;
-}
-
-/* Animate dropdown background color */
-.dropdown-menu {
-  transition: background-color 0.3s ease-in-out;
-}
-
-.navbar-links li:hover .dropdown-menu {
-  background-color: #111;
 }

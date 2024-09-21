@@ -10,13 +10,13 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <main>
+        {/* <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/service/:name" element={<ServicePage />} />
           </Routes>
 
-        </main>
+        </main> */}
         <Footer />
       </div>
     </Router>
