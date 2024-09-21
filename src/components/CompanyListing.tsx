@@ -1,7 +1,8 @@
 // eslint-disable
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import '../assets/styles/CompanyListing.css';
+import '../../assets/styles/CompanyListing.css';
+
 
 
 type Review = {
@@ -42,19 +43,33 @@ const CompanyListing: React.FC = () => {
   useEffect(() => {
     if (company) {
       // Fetch Google reviews
-      axios.get(`/api/companies/${company.id}/google-reviews`).then((response) => {
-        setGoogleReviews(response.data);
-      }).catch((error) => console.error('Error fetching Google reviews', error));
-
+        axios.get('/api/companies/1/google-reviews')
+            .then((response) => {
+                setGoogleReviews(response.data);
+            })
+            .catch((error) => {
+                console.error('Error fetching Google reviews:', error);
+                // Optionally, set a fallback state to show an error message in the UI
+                setGoogleReviews([]); // Empty array or placeholder data
+            });
       // Fetch Facebook reviews
-      axios.get(`/api/companies/${company.id}/facebook-reviews`).then((response) => {
-        setFacebookReviews(response.data);
-      }).catch((error) => console.error('Error fetching Facebook reviews', error));
-
+        axios.get(`/api/companies/${company.id}/facebook-reviews`)
+            .then((response) => {
+                setFacebookReviews(response.data);
+            })
+            .catch((error) => {
+                console.error('Error fetching Facebook reviews:', error);
+                setFacebookReviews([]); // Show fallback if there's an error
+            });
       // Fetch in-house reviews
-      axios.get(`/api/companies/${company.id}/inhouse-reviews`).then((response) => {
-        setInHouseReviews(response.data);
-      }).catch((error) => console.error('Error fetching in-house reviews', error));
+        axios.get(`/api/companies/${company.id}/inhouse-reviews`)
+            .then((response) => {
+                setInHouseReviews(response.data);
+            })
+            .catch((error) => {
+                console.error('Error fetching in-house reviews:', error);
+                setInHouseReviews([]); // Show fallback if there's an error
+            });
     }
   }, [company]);
 
