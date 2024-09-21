@@ -8,6 +8,10 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/react": "^18.3.8",
     "@types/react-dom": "^18.3.0",
+    "axios": "^1.7.7",
+    "express": "^4.21.0",
+    "mysql2": "^3.11.3",
+    "pg": "^8.13.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.2",
@@ -38,5 +42,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "ServiceAggregator is a web platform designed to streamline the process of advertising and discovering various services. Whether you're offering a service or searching for one, ServiceAggregator provides an easy-to-use interface to connect service providers with potential clients.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sxyafiq/ServiceAggregator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sxyafiq/ServiceAggregator/issues"
+  },
+  "homepage": "https://github.com/sxyafiq/ServiceAggregator#readme"
 }
