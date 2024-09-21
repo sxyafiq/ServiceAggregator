@@ -1,59 +1,55 @@
-/* src/components/CompanyListing.css */
+/* src/assets/styles/CompanyListing.css */
+
 .company-listing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 20px auto;
+    width: 90%;
+  }
+  
+  .company-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFD700;
+    border-radius: 20px;
     padding: 20px;
-    max-width: 600px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px;
   }
   
-  .company-listing img {
-    max-width: 150px;
+  .company-card img {
     border-radius: 50%;
-    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
   }
   
-  .company-listing h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
+  .company-details {
+    flex-grow: 1;
   }
   
-  .company-listing h3 {
-    font-size: 20px;
-    color: #555;
-    margin-top: 20px;
+  .company-name {
+    font-size: 1.5em;
+    font-weight: bold;
   }
   
-  .company-listing ul {
+  ul {
     list-style-type: none;
     padding: 0;
   }
   
-  .company-listing li {
-    background-color: #fff;
-    border: 1px solid #ddd;
+  li {
     margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
   }
   
-  .company-listing a {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #25d366;
-    color: white;
+  a {
+    color: green;
     text-decoration: none;
-    border-radius: 5px;
   }
   
-  .company-listing a:hover {
-    background-color: #1ebc5c;
-  }
-  
-  .company-listing p {
-    color: #777;
+  a:hover {
+    text-decoration: underline;
   }
   
