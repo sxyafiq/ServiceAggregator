@@ -27,52 +27,30 @@ const serviceCategories: ServiceCategory[] = [
   },
 ];
 
-const Navbar: React.FC = () => {
-  const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
+const NavBar: React.FC = () => {
+  const [isHovered, setIsHovered] = useState(false);
 
-  // Type category as string
-  const handleMouseEnter = (category: string) => {
-    setHoveredCategory(category);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredCategory(null);
-  };
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
 
   return (
-    <div className="navbar-wrapper">
-      <nav className="navbar">
-        <div className="navbar-logo">
-          <a href="/">Logo</a>
-        </div>
-        <ul className="navbar-links">
-          {serviceCategories.map((category, index) => (
-            <li
-              key={index}
-              onMouseEnter={() => handleMouseEnter(category.category)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <a href={`#${category.category.toLowerCase().replace(/\s/g, '-')}`}>
-                {category.category}
-              </a>
-
-              {hoveredCategory === category.category && (
-                <div className="dropdown-menu">
-                  <div className="dropdown-content">
-                    {category.services.map((service, idx) => (
-                      <a key={idx} href={`/service/${service.toLowerCase().replace(/\s/g, '-')}`}>
-                        {service}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </li>
-          ))}
+    <div className="navbar-container">
+      {isHovered && <div className="navbar-overlay"></div>}
+      <nav
+        className="navbar"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <ul className="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          {/* Keep your existing categories intact */}
         </ul>
       </nav>
     </div>
   );
 };
 
-export default Navbar;
+export default NavBar;
