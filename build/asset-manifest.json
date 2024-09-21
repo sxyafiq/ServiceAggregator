@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sxyafiq/ServiceAggregator/static/css/main.d4262f8a.css",
+    "main.js": "/sxyafiq/ServiceAggregator/static/js/main.2d348071.js",
+    "static/js/453.0c69cf18.chunk.js": "/sxyafiq/ServiceAggregator/static/js/453.0c69cf18.chunk.js",
+    "index.html": "/sxyafiq/ServiceAggregator/index.html",
+    "main.d4262f8a.css.map": "/sxyafiq/ServiceAggregator/static/css/main.d4262f8a.css.map",
+    "main.2d348071.js.map": "/sxyafiq/ServiceAggregator/static/js/main.2d348071.js.map",
+    "453.0c69cf18.chunk.js.map": "/sxyafiq/ServiceAggregator/static/js/453.0c69cf18.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4262f8a.css",
+    "static/js/main.2d348071.js"
+  ]
+}
