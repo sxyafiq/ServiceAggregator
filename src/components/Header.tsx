@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Header.css';
+import '../assets/styles/Header.css';
 
 const Header: React.FC = () => {
   // State to track the active dropdown
