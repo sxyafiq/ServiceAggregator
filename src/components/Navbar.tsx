@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
 import '../assets/styles/Navbar.css';
 
-// Define types for the service categories and services
-interface ServiceCategory {
-  category: string;
-  services: string[];
-}
-
 // Define the service categories with types
 const categories = [
   {
-    category: 'Home Services',
-    services: ['Cleaning Services', 'Plumbing Services', 'Electrical Services'],
+    category: 'Services',
+    services: [
+      { subsection: 'Home Services', items: ['Cleaning', 'Plumbing', 'Electrical'] },
+      { subsection: 'Business Services', items: ['Consulting', 'Marketing', 'IT Solutions'] },
+    ],
   },
   {
     category: 'Automotive Services',
@@ -28,25 +25,55 @@ const categories = [
 ];
 
 const NavBar: React.FC = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
 
-  const handleMouseEnter = () => setIsHovered(true);
-  const handleMouseLeave = () => setIsHovered(false);
+  const handleMouseEnter = (category: string) => {
+    setHoveredCategory(category);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredCategory(null);
+  };
 
   return (
     <div className="navbar-container">
-      {isHovered && <div className="navbar-overlay"></div>}
-      <nav
-        className="navbar"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
+      {hoveredCategory && <div className="navbar-overlay"></div>}
+      <nav className="navbar">
         <ul className="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
-          {/* Keep your existing categories intact */}
+          {categories.map((item, index) => (
+            <li
+              key={index}
+              className="nav-category"
+              onMouseEnter={() => handleMouseEnter(item.category)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <a href="#">{item.category}</a>
+
+              {/* Check if services contain subsections */}
+              {hoveredCategory === item.category && item.services && Array.isArray(item.services) && (
+                <ul className="dropdown">
+                  {item.services.map((service: any, serviceIndex: number) =>
+                    typeof service === 'object' ? (
+                      <li key={serviceIndex}>
+                        <a href="#">{service.subsection}</a>
+                        <ul className="dropdown-subsection">
+                          {service.items.map((subitem: string, subitemIndex: number) => (
+                            <li key={subitemIndex}>
+                              <a href="#">{subitem}</a>
+                            </li>
+                          ))}
+                        </ul>
+                      </li>
+                    ) : (
+                      <li key={serviceIndex}>
+                        <a href="#">{service}</a>
+                      </li>
+                    )
+                  )}
+                </ul>
+              )}
+            </li>
+          ))}
         </ul>
       </nav>
     </div>
