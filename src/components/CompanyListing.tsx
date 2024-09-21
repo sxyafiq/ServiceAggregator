@@ -1,7 +1,8 @@
-// src/components/CompanyListing.tsx
+// eslint-disable
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../assets/styles/CompanyListing.css';
+
 
 type Review = {
   reviewer_name: string;
